@@ -1,0 +1,63 @@
+@keyframes glowingbn5{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+
+
+}
+.bn5:active{
+    color: aqua;
+}
+
+.bn5:active:after{
+    background: rgb(13, 112, 112);
+}
+
+.container.hover::before,
+.bn5.container:hover:before{
+    opacity: 1;
+}
+
+.box label,
+.container::before,
+.bn5:before{
+    content: "";
+    background: linear-gradient(45deg,
+    #2eff75
+    #1fd35b
+    #1fd384
+    #1fd3bc
+    #1fc1d3
+    #1fa3d3
+    #1f70d3 
+    #1f51d3 
+    #1f29d3 
+    #3d1fd3 
+    #701fd3 
+    #9d1fd3 
+    #c11fd3
+    #d31fbc 
+    #d31f93 
+    #d31f75 
+    #d31f56);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% -4px);
+    height: calc(100% -4px);
+    animation: glowingbn5 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius:15px;
+
+
+}
